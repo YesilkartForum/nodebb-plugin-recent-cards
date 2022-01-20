@@ -7,7 +7,10 @@
 	<ul class="row recent-cards carousel-mode" itemscope itemtype="http://www.schema.org/ItemList">
 		{{{ each topics }}}
 		<li class="col-md-3 col-sm-6 col-xs-12 recent-card-container" data-cid="{topics.category.cid}">
-			<div class="recent-card">
+			<div class="recent-card style="
+			<!-- IF topics.category.bgColor -->background-color: {topics.category.bgColor};<!-- ENDIF topics.category.bgColor -->
+			"
+			>
 				<div class="recent-card-body">
 					<div>
 						<h4><a href="{config.relative_path}/topic/{topics.slug}{{{ if topics.bookmark }}}/{topics.bookmark}{{{ end }}}">{topics.title}</a></h4>
